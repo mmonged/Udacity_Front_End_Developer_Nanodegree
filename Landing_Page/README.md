@@ -1,4 +1,4 @@
-#  Udacity Front End Developer Nanodegree (Landing Page)
+#  Udacity Front End Web Developer Nanodegree (Landing Page)
 First Project: Landing Page.
 The Project starter code is here: https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page
 
