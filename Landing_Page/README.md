@@ -17,8 +17,8 @@ The Project starter code is here: https://github.com/udacity/fend/tree/refresh-2
 ## Project Development
 	A) index.html: 			HTML file has been edited to have another section (4th section) as required.
 	B) ./js/app.js: 		I) It has 3 Main helper Functions:
-						1- createNavigationBarList: Which gets the sections and create an unordered list of the sections in the navigation bar that go to each section specifically.
+						1- createNavigationBarList:	Which gets the sections and create an unordered list of the sections in the navigation bar that go to each section specifically.
 						2- updateActiveSection: 	Which unset all sections except the one that appears in the viewport as well as highlighting its navigation bar reference item in the navigation bar.
-						3- ScrollingTo:				Which scrolls smoothly to the section that has been clicked on in the navigation bar.						
+						3- ScrollingTo:			Which scrolls smoothly to the section that has been clicked on in the navigation bar.						
 					II) it uses event listener to update the active section while scrolling and clicking on the navigation bar items.
 	c) ./css/style.css: 		A new 'active' has been added to highlight the background color of the navigation toolbar item related to the active section in the view port.
