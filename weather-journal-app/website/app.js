@@ -20,7 +20,7 @@ async function getWeatherData() {
     if (!zipCode) {                                                                                         // If User Didn't Enter a Zip Code
         return alert('Please enter a zip code');                                                            // End the Function & Alert the User To Enter a Zip Code.
     }
-    
+
     if (zipCode.length !== 5) {                                                                             // If User Enter a Zip Code Not Equals to Five Digits
         return alert('Please enter a valid zip code of 5 digit numbers');                                   // End the Function & Alert the User To Enter a Correct Zip Code.
     }
@@ -49,13 +49,13 @@ async function getTemperature(baseUrl, zipCode, apiKey, unitMetric) {
 
         return (await apiData.json()).main.temp;
     }
-    catch(error){
+    catch (error) {
         console.log(error);
     }
 };
 
 /* Function to POST data */
-async function postData(temperature, feelings){
+async function postData(temperature, feelings) {
     try {
         const res = await fetch('/addWeather', {
             method: 'POST',
@@ -71,27 +71,27 @@ async function postData(temperature, feelings){
         })
         return await res.json();                                                                            // Return Response To Update Data-Field.
     }
-    catch(error){
+    catch (error) {
         console.log(error);
     }
 };
 
 /* Function to GET Project Data */
-async function UpdateDataField () {
+async function UpdateDataField() {
     try {
         const getData = await (await fetch('/getWeather')).json();                                          // Create Object To Get Data.
         // Update Data-Field Entery.
-        document.getElementById('date').innerHTML = 'Date: '+ getData.date;
-        document.getElementById('temp').innerHTML = 'Temperature: '+ getData.temp;
-        document.getElementById('content').innerHTML = 'I feel: '+ getData.feelings;
+        document.getElementById('date').innerHTML = 'Date: ' + getData.date;
+        document.getElementById('temp').innerHTML = 'Temperature: ' + getData.temp;
+        document.getElementById('content').innerHTML = 'I feel: ' + getData.feelings;
     }
-    catch(error){
+    catch (error) {
         console.log(error);
     }
 }
 
 // Function To Clear Data Field When Clicking On Generate Button.
-function clearFieldData(){
+function clearFieldData() {
     document.getElementById('date').innerHTML = '';
     document.getElementById('temp').innerHTML = '';
     document.getElementById('content').innerHTML = '';
