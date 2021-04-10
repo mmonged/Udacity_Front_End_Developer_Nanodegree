@@ -18,7 +18,7 @@ async function getWeatherData() {
     const feelings = document.querySelector('#feelings').value;                                             // Read User's Feelings.
 
     if (!zipCode) {                                                                                         // If User Didn't Enter a Zip Code
-        return alert('Please enter a zip code');                                                           // End the Function & Alert the User To Enter a Zip Code.
+        return alert('Please enter a zip code');                                                            // End the Function & Alert the User To Enter a Zip Code.
     }
 
     if (!feelings) {                                                                                        // If User Didn't Enter his/her Feelings.
@@ -39,7 +39,7 @@ async function getTemperature(baseUrl, zipCode, apiKey, unitMetric) {
         // Fetching the Weather Data from the API
         const apiData = await fetch(baseUrl + zipCode + apiKey + unitMetric);
 
-        if (apiData.status === 404 || apiData.status === 400) {                                              // If 404 (Wrong Zip Code) or 400 (No Zip Code), No Need To Check 400 Since It Is Handled Previously.
+        if (apiData.status === 404 || apiData.status === 400) {                                             // If 404 (Wrong Zip Code) or 400 (No Zip Code), No Need To Check 400 Since It Is Handled Previously.
             return alert('Please Enter a valid zip code.');                                                 // End the Function & Alert the User To Enter a Zip Code or A Correct One.
         }
         return (await apiData.json()).main.temp;
