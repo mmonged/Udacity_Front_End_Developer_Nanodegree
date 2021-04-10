@@ -21,6 +21,10 @@ async function getWeatherData() {
         return alert('Please enter a zip code');                                                            // End the Function & Alert the User To Enter a Zip Code.
     }
     
+    if (zipCode.length !== 5) {                                                                             // If User Enter a Zip Code Not Equals to Five Digits
+        return alert('Please enter a valid zip code of 5 digit numbers');                                   // End the Function & Alert the User To Enter a Correct Zip Code.
+    }
+
     if (!feelings) {                                                                                        // If User Didn't Enter his/her Feelings.
         return alert('Please enter your feelings');                                                         // End the Function & Alert the User To Enter his/her Feelings.
     }
