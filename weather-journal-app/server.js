@@ -38,20 +38,20 @@ function listening() {
 app.get('/getWeather', sendData);
 
 // Callback function to complete GET '/getWeather'
-function sendData (req, res) {
+function sendData(req, res) {
     res.send(projectData);
     projectData = {};
 }
 
 // Post Route
-app.post('/addWeather', addData );
+app.post('/addWeather', addData);
 
 // Function That Adds Data To ProjectData Object & Send Successful POST.
-function addData (req, res) {
+function addData(req, res) {
     projectData = {
         temp: req.body.temp,
         date: req.body.date,
         feelings: req.body.content,
     }
-    res.send({status: 'success'})
+    res.send({ status: 'success' })
 }
